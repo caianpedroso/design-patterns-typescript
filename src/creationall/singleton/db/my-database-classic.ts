@@ -1,26 +1,25 @@
-interface User {
-    name: string,
-    age: number
-}
+import { User } from "../interfaces/users";
 
 export class MyDatabaseClassic {
-    private static instance: MyDatabaseClassic | null = null;
-    private  users: User[] = [];
+    private static _instance: MyDatabaseClassic | null = null;
+    private users: User[] = [];
 
     private constructor() {}
 
-    public static getInstance(): MyDatabaseClassic {
-        if (MyDatabaseClassic.instance === 'null') {
-            MyDatabaseClassic.instance = new MyDatabaseClassic();
+    static get instance(): MyDatabaseClassic {
+        if (MyDatabaseClassic._instance === null) {
+            MyDatabaseClassic._instance = new MyDatabaseClassic();
         }
-        return <MyDatabaseClassic>MyDatabaseClassic.instance;
+
+        return MyDatabaseClassic._instance;
     }
 
     add(user: User): void {
         this.users.push(user);
     }
+
     remove(index: number): void {
-        this.users.slice(index, 1);
+        this.users.splice(index, 1);
     }
 
     show(): void {
@@ -29,10 +28,3 @@ export class MyDatabaseClassic {
         }
     }
 }
-
-const db1 = MyDatabaseClassic.getInstance();
-db1.add({ name: 'Caian', age: 27});
-db1.add({ name: 'Maria', age: 37});
-db1.add({ name: 'João', age: 47});
-
-db1.show();
