@@ -29,6 +29,6 @@ const person1 = new Person('João', 'Pedroso', 28);
 console.log(person1);
 console.log(person1.fullName());
 
-const person2 = new Person('Bruna', 'Santos', 27);
+const person2 = new SubPerson('Bruna', 'Santos', 27);
 console.log(person2);
 console.log(person2.fullName());
