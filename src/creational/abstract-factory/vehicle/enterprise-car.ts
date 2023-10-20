@@ -9,4 +9,4 @@ export class EnterpriseCar implements VehicleProtocol {
       `${this.name} está buscando ${this.customer.name} (ENTERPRISE)`,
     );
   }
-}
+};
