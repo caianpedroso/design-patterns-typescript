@@ -1,6 +1,6 @@
 export interface Prototype {
     clone(): Prototype;
-}
+};
 export class Person implements Prototype {
     public addresses: Address[] = [];
 
