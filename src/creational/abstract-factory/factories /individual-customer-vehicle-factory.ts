@@ -6,10 +6,10 @@ import { IndividualCustomer } from "../customer/individual-customer";
 export class IndividualCreateVehicleCustomerFactory {
     createCustomer(customerName: string): Customer {
         return new IndividualCustomer(customerName);
-    }
+    };
 
     createVehicle(vehicle: string, customerName: string): VehicleProtocol {
         const customer = this.createCustomer(customerName);
         return new IndividualCar(vehicle, customer);
-    }
-}
+    };
+};
