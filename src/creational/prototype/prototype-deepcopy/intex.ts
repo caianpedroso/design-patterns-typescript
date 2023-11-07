@@ -10,20 +10,20 @@ export class Person implements Prototype {
         const newObj = new Person(this.name, this.age);
         newObj.addresses = this.addresses.map((item) => item.clone());
         return newObj;
-    }
+    };
 
     addAddress(address: Address): void {
         this.addresses.push(address);
-    }
-}
+    };
+};
 
 export class Address implements Prototype {
     constructor(public street: string, public number: number) {}
 
     clone(): Address {
         return new Address(this.street, this.number);
-    }
-}
+    };
+};
 
 const address1 = new Address('Av Paulista', 150);
 const person1 = new Person('Caian', 28);
