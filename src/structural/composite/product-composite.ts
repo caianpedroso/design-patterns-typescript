@@ -5,3 +5,13 @@ export abstract class ProductComponent {
 
   remove(product: ProductComponent): void {}
 };
+
+export class ProductLeaf extends ProductComponent {
+  constructor(public name: string, public price: number) {
+    super();
+  }
+
+  getPrice(): number {
+    return this.price;
+  }
+}
