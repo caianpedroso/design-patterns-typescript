@@ -15,3 +15,12 @@ export class ProductLeaf extends ProductComponent {
     return this.price;
   }
 }
+
+export class ProductComposite extends ProductComponent{
+  private children: ProductComponent[] = [];
+
+  remove(...product: ProductComponent[]): void {
+    const productIndex = this.children.indexOf(product);
+    if (productIndex !== -1) this.children.splice(productIndex, 1);
+  }
+}
