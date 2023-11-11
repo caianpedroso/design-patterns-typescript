@@ -19,7 +19,10 @@ export class ProductLeaf extends ProductComponent {
 export class ProductComposite extends ProductComponent{
   private children: ProductComponent[] = [];
 
-  remove(...product: ProductComponent[]): void {
+  add (...products: ProductComponent[]): void {
+    products.forEach(product => this.children.indexOf(product));
+  }
+  remove(product: ProductComponent): void {
     const productIndex = this.children.indexOf(product);
     if (productIndex !== -1) this.children.splice(productIndex, 1);
   }
