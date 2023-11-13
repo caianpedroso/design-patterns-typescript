@@ -14,7 +14,7 @@ export class ProductLeaf extends ProductComponent {
   getPrice(): number {
     return this.price;
   }
-}
+};
 
 export class ProductComposite extends ProductComponent{
   private children: ProductComponent[] = [];
