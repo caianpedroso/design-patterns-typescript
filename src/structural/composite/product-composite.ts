@@ -29,5 +29,5 @@ export class ProductComposite extends ProductComponent{
 
   getPrice(): number {
     return this.children.reduce((sum, child) => sum + child.getPrice(), 0 );
-  }
+  };
 };
