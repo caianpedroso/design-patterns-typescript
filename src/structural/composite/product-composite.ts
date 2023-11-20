@@ -31,3 +31,5 @@ export class ProductComposite extends ProductComponent{
     return this.children.reduce((sum, child) => sum + child.getPrice(), 0 );
   };
 };
+
+const pen = new ProductLeaf('Caneta', 1);
