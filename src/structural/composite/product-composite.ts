@@ -33,3 +33,4 @@ export class ProductComposite extends ProductComponent{
 };
 
 const pen = new ProductLeaf('Caneta', 1);
+const smartphone = new ProductLeaf('Smartphone', 1_000);
