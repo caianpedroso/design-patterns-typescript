@@ -8,4 +8,4 @@ db1.add({ name: 'João', age: 47});
 
 db1.show();
 
-export { db1 }
+export { db1 };
