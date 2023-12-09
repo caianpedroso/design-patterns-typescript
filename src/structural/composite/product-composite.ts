@@ -32,7 +32,7 @@ export class ProductComposite extends ProductComponent{
   };
 };
 
-const pen = new ProductLeaf('Caneta', 1);
+const pen = new ProductLeaf('Caneta ', 1);
 const smartphone = new ProductLeaf('Smartphone', 1_000);
 const tShirt = new ProductLeaf('Camiseta', 40);
 const productBox = new ProductComposite();
