@@ -41,3 +41,4 @@ productBox.add(pen, smartphone, tShirt);
 const tablet = new ProductLeaf('Tablet', 2_000);
 const kindle = new ProductLeaf('Kindle', 300);
 const anotherProductBox = new ProductComposite();
+anotherProductBox.add(tablet, kindle);
