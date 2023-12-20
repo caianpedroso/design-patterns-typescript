@@ -43,3 +43,6 @@ const kindle = new ProductLeaf('Kindle', 300);
 const anotherProductBox = new ProductComposite();
 anotherProductBox.add(tablet, kindle);
 productBox.add(anotherProductBox);
+
+console.log(productBox);
+console.log(productBox.getPrice());
