@@ -16,11 +16,10 @@ export const MyDatabaseFunction = (function () {
         show(): void {
             for (const user of users) {
                 console.log(user);
-            }
-        }
-    }
-})()
-
+            };
+        };
+    };
+})();
 
 
 
